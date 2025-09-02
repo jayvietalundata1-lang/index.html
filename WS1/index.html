@@ -8,37 +8,42 @@
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
     <h2 class="logo">My Portfolio</h2>
-    <ul>
+    <!-- Hamburger Button -->
+    <button id="hamburger-btn">☰</button>
+    <!-- Nav Links -->
+    <ul id="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#inquire">Inquire</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Welcome to My Portfolio</h1>
     <p>Showcasing my skills and hobbies</p>
     <a href="#contact" class="btn">Contact Me</a>
   </section>
 
+  <!-- About Section -->
   <section id="about" class="about">
-  <div class="about-container">
-    <img src="">
-    
-    <div class="about-text">
-      <h2>👋 About Me</h2>
-      <p>
-        Hi! My name is <b>Jayvie</b>. I am passionate about technology, learning new skills, 
-        and sharing knowledge with others. I enjoy coding, designing, and exploring creative ideas.
-      </p>
+    <div class="about-container">
+      <img src="c:\Users\Jayvie Talundata\AppData\Local\Microsoft\Windows\INetCache\IE\ZXKR1B9Y\IMG_1750400430929[1].jpg" alt="Profile Picture" class="profile-pic">
+        <h2>👋 About Me</h2>
+        <p>
+          Hi! My name is <b>Jayvie</b>. I am passionate about technology, learning new skills, 
+          and sharing knowledge with others. I enjoy coding, designing, and exploring creative ideas.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
+  <!-- Hobbies Section -->
   <section id="hobbies">
     <h2>🎯 My Hobbies</h2>
     <div class="card-grid">
@@ -61,7 +66,8 @@
     </div>
   </section>
 
-  <section id="contact" class="content-form">
+  <!-- Contact Form -->
+  <section id="inquire" class="content-form">
     <h2>Inquire <span></span></h2>
     <form>
       <div class="input-box">
@@ -75,15 +81,31 @@
       <input type="submit" value="Send Message" class="btn-1">
     </form>
   </section>
-  <h3>My Location</h3>
-  <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.1245943517565!2d124.74724297325051!3d6.3779135936123925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f7f7ffd7f2460f%3A0xd761099ed3a3a2c1!2sHoly%20Child%20Central%20Colleges%20Inc.!5e0!3m2!1sen!2sph!4v1756429589776!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
 
+  <!-- My Location -->
+  <section id="mylocation">
+    <h2>My Location</h2>
+    <div class="about-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4715.354973341193!2d124.74697095699335!3d6.377849036545773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f7f7ffd7f2460f%3A0xd761099ed3a3a2c1!2sHoly%20Child%20Central%20Colleges%20Inc.!5e0!3m2!1sen!2sph!4v1756805950498!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <h3>Contact</h3>
-    <p>
-    Email jayvietalundata1@gmail,com.</p>
-     <p>Phone:09979551097</p>
+    <p>Email: jayvietalundata1@gmail.com</p>
+    <p>Phone: 09979551097</p>
   </footer>
 
+  <!-- JavaScript -->
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

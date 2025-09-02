@@ -109,8 +109,8 @@ body {
 }
 
 .profile-pic {
-  width: 250px;   /* control size */
-  height: 250px;
+  width: 230px;   
+  height: 230px;  
   border-radius: 20%;
   object-fit: cover;
   border: 5px solid #00bcd4;
@@ -152,7 +152,7 @@ body {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 50px;
 }
 
 .card {
@@ -252,4 +252,76 @@ footer {
   text-align: center;
   padding: 15px 0;
   margin-top: 30px;
+}
+
+.location {
+  background: linear-gradient(135deg, #00bcd4, #4caf50);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.location h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3); 
+}
+
+.location p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: #130a0a;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
 }
